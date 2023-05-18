@@ -30,8 +30,9 @@ jobs:
       
     - name: Executando o Java
       run: |
-            cd src
             java -cp . CalculadoraTeste
+            javac -cp . CalculadoraTeste.java
+            
     - name: Obtendo a versão atual 
       id: get_version 
       run: echo ::set-output name=version::$(cat version.txt) 
